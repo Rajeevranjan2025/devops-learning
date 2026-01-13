@@ -1,0 +1,93 @@
+LINUX BASIC COMMANDS – DAY 1
+
+1. pwd
+Use: Shows the present working directory (current location).
+Command:
+pwd
+
+
+2. ls
+Use: Lists files and directories.
+Commands:
+ls
+ls -l        (long listing)
+ls -a        (shows hidden files)
+
+
+3. cd
+Use: Changes directory.
+Commands:
+cd linux
+cd ..
+cd ~
+
+
+4. mkdir
+Use: Creates a new directory.
+Command:
+mkdir test-folder
+
+
+5. rm
+Use: Deletes files or directories.
+Commands:
+rm file.txt
+rm -r foldername
+
+
+6. cp
+Use: Copies files or directories.
+Commands:
+cp source.txt destination.txt
+cp -r folder1 folder2
+
+
+7. mv
+Use: Moves or renames files/directories.
+Commands:
+mv oldname.txt newname.txt
+mv file.txt /tmp/
+
+
+8. touch
+Use: Creates an empty file.
+Command:
+touch example.txt
+
+
+9. cat
+Use: Displays file content.
+Command:
+cat day1.txt
+
+
+10. less
+Use: Views file content page by page.
+Command:
+less commands.txt
+(press q to quit)
+
+
+11. head
+Use: Shows first 10 lines of a file.
+Command:
+head commands.txt
+
+
+12. tail
+Use: Shows last 10 lines of a file.
+Command:
+tail commands.txt
+
+
+13. man
+Use: Shows manual/help for a command.
+Command:
+man ls
+(press q to quit)
+
+
+14. clear
+Use: Clears the terminal screen.
+Command:
+clear

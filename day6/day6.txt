@@ -1,0 +1,128 @@
+🚀 DevOps Journey – Day 6 Notes (Docker Advanced)
+
+--------------------------------------------------
+
+🧠 What I Learned Today
+- Container naming
+- Logs and debugging
+- docker exec usage
+- Volumes (data persistence)
+- Restarting containers
+
+--------------------------------------------------
+
+📛 Container Naming
+
+docker run -d --name mynginx nginx
+
+→ Assigns custom name to container
+→ Easier to manage than random names
+
+--------------------------------------------------
+
+📍 Check Running Containers
+
+docker ps
+
+--------------------------------------------------
+
+📊 Logs (VERY IMPORTANT)
+
+docker logs mynginx
+docker logs -f mynginx
+
+-f → live logs
+
+--------------------------------------------------
+
+🧠 Use Case:
+Check logs when app crashes
+
+--------------------------------------------------
+
+🔧 Execute Inside Container
+
+docker exec -it mynginx bash
+
+→ Enter running container
+
+Exit:
+exit
+
+--------------------------------------------------
+
+💾 Volumes (VERY IMPORTANT)
+
+Problem:
+Container data is temporary
+
+Solution:
+Volumes store data outside container
+
+--------------------------------------------------
+
+📍 Run with Volume
+
+docker run -d -p 8082:80 -v $(pwd):/usr/share/nginx/html nginx
+
+--------------------------------------------------
+
+🧠 Meaning
+
+$(pwd) → current folder
+/usr/share/nginx/html → container path
+
+→ Local files reflect inside container
+
+--------------------------------------------------
+
+🚀 Live Update
+
+Edit index.html → refresh browser
+→ changes visible instantly
+
+--------------------------------------------------
+
+🔄 Restart Container
+
+docker restart mynginx
+
+--------------------------------------------------
+
+🛑 Stop All Containers
+
+docker stop $(docker ps -q)
+
+--------------------------------------------------
+
+🧠 Real DevOps Workflow
+
+1. App fails
+2. Check logs
+3. Exec into container
+4. Fix issue
+5. Restart container
+
+--------------------------------------------------
+
+🔥 Interview Questions
+
+- What is volume?
+- Why data is lost in container?
+- docker logs vs docker exec?
+- Why naming containers?
+
+--------------------------------------------------
+
+🚀 Key Takeaways
+
+- Containers are temporary
+- Volumes persist data
+- Logs help debugging
+- Naming improves management
+
+--------------------------------------------------
+
+💡 Personal Note
+
+I can now manage and debug Docker containers like a DevOps engineer.
